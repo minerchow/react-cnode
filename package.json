@@ -1,0 +1,21 @@
+{
+  "name": "react-seed",
+  "version": "0.0.0",
+  "description": "A project.",
+  "private": true,
+  "keywords": [
+    ""
+  ],
+  "scripts": {
+    "dev": "cooking watch -p",
+    "dist": "cooking build -p"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "babel-plugin-import": "^1.4.0",
+    "react": "*",
+    "react-dom": "*",
+    "react-router": "2.7"
+  }
+}

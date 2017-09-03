@@ -1,0 +1,46 @@
+var cooking = require('cooking');
+var path = require('path');
+
+cooking.set({
+  entry: {
+    app: './src/app.js'
+  },
+  dist: './dist',
+  template: 'src/index.tpl',
+
+  // development
+  devServer: {
+    port: 8080,
+    publicPath: '/'
+  },
+
+  // production
+  clean: true,
+  hash: true,
+  chunk: true,
+  publicPath: '/dist/',
+  assetsPath: 'static',
+  sourceMap: true,
+  extractCSS: true,
+  urlLoaderLimit: 10000,
+  postcss: [
+    // require('postcss-cssnext')
+  ],
+  devServer: {
+    port: 8080,
+      hostname: 'localhost',
+      publicPath:"/",
+      proxy: {
+        '*': {
+          target: 'https://cnodejs.org/api/v1/',
+          secure: false
+        }
+      }
+  },
+  alias: {
+    'src': path.join(__dirname, 'src')
+  },
+  extends: ['react','less']
+});
+
+module.exports = cooking.resolve();
