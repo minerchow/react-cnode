@@ -14,7 +14,7 @@ class Index extends Component {
         var that = this;
         axios.get('/topics').then(function(data){
               console.log(data.data)
-              if(data.success){
+              if(data.data.success){
                 
                 that.setState({dataObj:that.state.dataObj.concat(data.data.data)})
                 console.log(that.state.dataObj)
