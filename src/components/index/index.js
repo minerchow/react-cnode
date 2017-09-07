@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Content from './content';
+import Pagenation from "./pagenation";
 import axios from 'axios';
 class Index extends Component {
     constructor(props) {
@@ -25,6 +26,7 @@ class Index extends Component {
     render() {
         return <div>
             <Content data={this.state.dataObj}/>
+            <Pagenation/>
         </div>;
     }
 }

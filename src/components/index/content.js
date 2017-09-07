@@ -5,20 +5,21 @@ import './content.less';
 class Content extends Component {
     constructor(props){
         super(props);
-        var that = this;
-        
-       
+
+    }
+    tabLink(tab){
+        //console.log(tab)
     }
     render() {
         console.log(this.props)
         return <div className="content">
             <div className="header">
-                       <a href="/?tab=all" className="topic-tab current-tab">全部</a>
-                       <a href="/?tab=all" className="topic-tab current-tab">精华</a>
-                       <a href="/?tab=all" className="topic-tab current-tab">分享</a>
-                       <a href="/?tab=all" className="topic-tab current-tab">问答</a>
-                       <a href="/?tab=all" className="topic-tab current-tab">招聘</a>
-                       <a href="/?tab=all" className="topic-tab current-tab">客户端测试</a> 
+                       <a href="javascript:void(0)" onClick={this.tabLink.bind(this,'all')} className="topic-tab current-tab">全部</a>
+                       <a href="javascript:void(0)" onClick={this.tabLink.bind(this,'good')} className="topic-tab current-tab">精华</a>
+                       <a href="javascript:void(0)" onClick={this.tabLink.bind(this,'share')} className="topic-tab current-tab">分享</a>
+                       <a href="javascript:void(0)" onClick={this.tabLink.bind(this,'ask')} className="topic-tab current-tab">问答</a>
+                       <a href="javascript:void(0)" onClick={this.tabLink.bind(this,'job')} className="topic-tab current-tab">招聘</a>
+                       <a href="javascript:void(0)" onClick={this.tabLink.bind(this,'dev')} className="topic-tab current-tab">客户端测试</a> 
             </div>
             <div className="topic-list">
                 {
